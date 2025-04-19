@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WikiTyping</title>
+</head>
+<body>
+    <h1>Choose what you want to type!</h1>
+    <p>Select a category and start the typing test.</p>
+    <form action="/start" method="POST">
+        <select name="category">
+            {% for cat in categories %}
+                <option value="{{ cat }}">{{ cat }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Start Typing Test</button>
+    </form>
+</body>
+</html>
